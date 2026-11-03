@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Omskriv tekst gratis – AI tekstomskriver på dansk</title>
-<meta name="description" content="Omskriv din tekst gratis på sekunder. Gør den mere naturlig, professionel, kortere eller enklere – på korrekt dansk. Se LIX-tallet før og efter.">
-<link rel="canonical" href="https://DITDOMÆNE.dk/">
+<title>Omskrivning af tekst – Omskriv tekst gratis online</title>
+<meta name="description" content="Omskriv din tekst gratis med AI. Vælg stil, få korrekt dansk med samme mening, og se LIX-tallet før og efter. Hurtig omskrivning af tekst online.">
+<link rel="canonical" href="https://omskrivningaftekst.dk/">
 <meta property="og:title" content="Omskriv tekst gratis – AI tekstomskriver på dansk">
 <meta property="og:description" content="Omskriv din tekst på sekunder. Naturlig, professionel, venlig, kortere eller enklere.">
 <meta property="og:type" content="website">
@@ -16,10 +16,13 @@
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebApplication","name":"Omskriv min tekst","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"da","offers":{"@type":"Offer","price":"0","priceCurrency":"DKK"}},
  {"@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Er det gratis at omskrive tekst?","acceptedAnswer":{"@type":"Answer","text":"Ja. Du kan omskrive tekster på op til 300 ord gratis. Med Pro kan du omskrive længere tekster uden begrænsning."}},
-  {"@type":"Question","name":"Ændrer værktøjet meningen i min tekst?","acceptedAnswer":{"@type":"Answer","text":"Nej. Teksten skrives om med samme mening og de samme fakta. Navne, tal og hilsner bevares."}},
-  {"@type":"Question","name":"Hvad er LIX?","acceptedAnswer":{"@type":"Answer","text":"LIX er et læsbarhedstal. Under 25 er meget let, 25–34 let, 35–44 middel, 45–54 svær og 55 eller derover meget svær."}},
-  {"@type":"Question","name":"Gemmer I min tekst?","acceptedAnswer":{"@type":"Answer","text":"Nej. Teksten sendes kun til omskrivning og gemmes ikke på siden."}}
+  {"@type":"Question","name":"Hvordan omskriver jeg en tekst?","acceptedAnswer":{"@type":"Answer","text":"Du omskriver en tekst ved at indsætte den i værktøjet, vælge en stil og klikke for at få en ny version. AI bevarer budskabet, men skifter ordvalg og sætningsopbygning. Læs altid resultatet igennem, og ret de steder til, hvor du vil have din egen stemme med."}},
+  {"@type":"Question","name":"Er det gratis at omskrive min tekst?","acceptedAnswer":{"@type":"Answer","text":"Ja, du kan omskrive din tekst gratis på omskrivningaftekst.dk. Indsæt blot din tekst, og få et nyt forslag med det samme. Værktøjet er lavet, så alle hurtigt kan få hjælp til at skrive om tekst uden besvær."}},
+  {"@type":"Question","name":"Hvad er forskellen på at omformulere og omskrive tekst?","acceptedAnswer":{"@type":"Answer","text":"I praksis betyder de to ord næsten det samme. At omformulere tekst handler ofte om at sige den samme pointe med andre ord. At omskrive tekst kan også dække større ændringer, fx at gøre teksten kortere, længere eller ændre tonen helt."}},
+  {"@type":"Question","name":"Kan jeg bruge en tekst omskriver til skoleopgaver?","acceptedAnswer":{"@type":"Answer","text":"Du kan bruge en tekst omskriver til at forbedre dine egne formuleringer, men du skal følge din skoles regler for AI. Omskriv aldrig andres tekst og aflever den som din egen. Angiv altid kilder, når du bruger andres idéer eller viden."}},
+  {"@type":"Question","name":"Ændrer værktøjet betydningen af min tekst?","acceptedAnswer":{"@type":"Answer","text":"Målet er at bevare betydningen og kun ændre måden, den bliver sagt på. AI kan dog af og til misforstå en nuance. Derfor er det en god idé at læse den omskrevne tekst grundigt igennem og rette eventuelle fejl, før du bruger den."}},
+  {"@type":"Question","name":"Kan jeg skrive om tekst til min hjemmeside?","acceptedAnswer":{"@type":"Answer","text":"Ja, værktøjet egner sig godt til at skrive om tekst til hjemmesider, produktsider og blogindlæg. Du kan gøre teksten mere enkel, mere overbevisende eller mere unik. Sørg for, at det endelige indhold er korrekt og passer til din virksomheds tone."}},
+  {"@type":"Question","name":"Hvor lang tid tager det at omskrive tekst?","acceptedAnswer":{"@type":"Answer","text":"Det tager typisk kun få sekunder at omskrive tekst med værktøjet. Du indsætter teksten, vælger stil og får resultatet med det samme. Den tid, du sparer, kan du bruge på at gennemlæse og finpudse den nye version."}}
  ]}
 ]}
 </script>
@@ -37,6 +40,7 @@
   --accent:#5fb3b3; --accent-ink:#0d1a1d; --mark:#6b5d1a;
   --good:#6cc28a; --warn:#e0a54a; --bad:#e57b7b; color-scheme:dark}}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.55 var(--body)}
 .wrap{max-width:1120px;margin:0 auto;padding-block:32px 48px;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
@@ -46,8 +50,8 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-
 .pro-link{font:600 14px/1 var(--body);color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:8px 14px}
 h1{font:700 clamp(30px,5vw,44px)/1.05 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
 h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%);padding:0 2px}
-h2{font:700 24px/1.2 var(--display);margin:0 0 8px;text-wrap:balance}
-h3{font:600 16px/1.3 var(--body);margin:0 0 4px}
+h2{font:700 clamp(22px,3vw,28px)/1.2 var(--display);letter-spacing:-.01em;margin:0 0 12px;text-wrap:balance}
+h3{font:600 16px/1.3 var(--body);margin:0 0 6px}
 .lede{color:var(--muted);margin:6px 0 0;max-width:62ch}
 .modes{display:flex;flex-wrap:wrap;gap:8px}
 .mode{font:500 14px/1 var(--body);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 14px;border-radius:999px;cursor:pointer}
@@ -75,18 +79,41 @@ textarea,.out{font:400 16px/1.65 var(--body);color:var(--fg);background:transpar
 .status{color:var(--muted);font-size:14px}
 .status.err{color:var(--bad)}
 .status a{color:var(--accent)}
-.info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:24px;border-top:1px solid var(--line)}
-@media (max-width:760px){.info{grid-template-columns:1fr}}
-.info p,.faq p{margin:0;color:var(--muted);max-width:65ch}
-.faq{display:flex;flex-direction:column;gap:16px}
+.faq{display:flex;flex-direction:column;gap:12px}
+.faq p{margin:0;color:var(--muted);max-width:68ch}
 details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 summary{font-weight:600;cursor:pointer}
-details p{margin-top:8px}
+.faq details p{margin-top:8px}
 .pro-box{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
 .pro-box input{font:400 14px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);width:160px}
 footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
 @media (prefers-reduced-motion:no-preference){.thinking::after{content:"";display:inline-block;width:1ch;animation:dots 1.2s steps(4) infinite}}
 @keyframes dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+
+/* ===== Content sections ===== */
+.content{display:flex;flex-direction:column;gap:56px;margin-top:24px;padding-top:40px;border-top:1px solid var(--line)}
+.block > p{margin:0 0 12px;color:var(--muted);max-width:68ch}
+.block > p:last-child{margin-bottom:0}
+.intro p{margin:0 0 12px;font-size:17px;line-height:1.65;max-width:68ch}
+.intro p:first-child{color:var(--fg)}
+.intro p:not(:first-child){color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.card p{margin:0;color:var(--muted)}
+.grid{display:grid;gap:16px;margin:16px 0}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:760px){.grid-3,.grid-2{grid-template-columns:1fr}}
+.steps{list-style:none;padding:0}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:500 14px/1 var(--mono);margin-bottom:12px}
+.who{list-style:none;padding:0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.who strong{display:block;margin-bottom:4px}
+.who span{color:var(--muted)}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:24px}
+.callout p{margin:0 0 12px;color:var(--muted);max-width:68ch}
+.callout p:last-child{margin-bottom:0}
+.cta{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:40px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.cta p{margin:0;color:var(--muted);max-width:60ch}
+.cta .primary{text-decoration:none;margin-top:8px;display:inline-block}
 </style>
 </head>
 <body>
@@ -97,7 +124,7 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
   </nav>
 
   <header>
-    <h1>Omskriv <span>tekst</span> gratis</h1>
+    <h1>Omskriv <span>tekst</span> gratis – hurtig omskrivning af tekst online</h1>
     <p class="lede">Indsæt din tekst, vælg en stil, og få den skrevet om på korrekt dansk med samme mening. LIX-tallet viser, hvor let teksten er at læse før og efter.</p>
   </header>
 
@@ -128,32 +155,97 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
     <span class="status" id="status" role="status"></span>
   </div>
 
-  <section class="info" aria-label="Sådan virker det">
-    <div><h3>Samme mening, bedre tekst</h3><p>Værktøjet skriver din tekst om, så den læses bedre, men bevarer fakta, navne og tal.</p></div>
-    <div><h3>Seks stilarter</h3><p>Gør teksten mere naturlig, professionel eller venlig. Eller gør den kortere, enklere eller mere uddybende.</p></div>
-    <div><h3>Se læsbarheden</h3><p>LIX-tallet viser, hvor svær teksten er at læse. Brug "Enklere" til tekster for kunder og borgere.</p></div>
-  </section>
+  <main class="content">
 
-  <section class="faq" id="pro">
-    <h2>Gratis og Pro</h2>
-    <p>Gratis: op til 300 ord pr. tekst. Pro: op til 3.000 ord pr. tekst og ingen ventetid.</p>
-    <div class="pro-box">
-      <a class="primary" id="buy" href="#" style="text-decoration:none">Køb Pro</a>
-      <label for="pro-code">Har du en Pro-kode?</label>
-      <input id="pro-code" placeholder="Indtast kode" autocomplete="off">
-      <button class="ghost" id="save-code">Gem</button>
-      <span id="pro-state"></span>
-    </div>
-  </section>
+    <section class="intro" aria-label="Om omskrivning af tekst">
+      <p>Har du en tekst, der skal siges på en ny måde? Med vores værktøj til omskrivning af tekst sætter du din tekst ind, og AI skriver den om, så budskabet er det samme, men ordene er nye. Det tager kun et øjeblik.</p>
+      <p>Værktøjet er lavet til alle, der skriver på dansk. Det kan være en opgave til studiet, en produkttekst til webshoppen eller en e-mail, der skal lyde mere professionel. Du vælger selv, hvordan teksten skal lyde.</p>
+      <p>Det er gratis at bruge, og du behøver ingen erfaring. Indsæt din tekst, klik, og få et nyt forslag med det samme.</p>
+    </section>
 
-  <section class="faq" aria-label="Spørgsmål og svar">
-    <h2>Spørgsmål og svar</h2>
-    <details><summary>Er det gratis at omskrive tekst?</summary><p>Ja. Du kan omskrive tekster på op til 300 ord gratis. Med Pro kan du omskrive længere tekster uden begrænsning.</p></details>
-    <details><summary>Ændrer værktøjet meningen i min tekst?</summary><p>Nej. Teksten skrives om med samme mening og de samme fakta. Navne, tal og hilsner bevares.</p></details>
-    <details><summary>Hvad er LIX?</summary><p>LIX er et læsbarhedstal. Under 25 er meget let, 25–34 let, 35–44 middel, 45–54 svær og 55 eller derover meget svær.</p></details>
-    <details><summary>Gemmer I min tekst?</summary><p>Nej. Teksten sendes kun til omskrivning og gemmes ikke på siden.</p></details>
-    <details><summary>Kan jeg også rette stavefejl?</summary><p>Ja. "Mere naturlig" retter stave-, komma- og grammatikfejl. Til ren korrektur kan du bruge vores <a href="#" id="corrector-link">dansk stavekontrol</a>.</p></details>
-  </section>
+    <section class="block">
+      <h2>Sådan virker det – omskriv min tekst i 3 trin</h2>
+      <p>Det skal være nemt at omskrive tekst. Derfor består processen kun af tre trin:</p>
+      <ol class="grid grid-3 steps">
+        <li class="card"><span class="num">1</span><h3>Indsæt din tekst</h3><p>Kopiér den tekst, du vil have skrevet om, og indsæt den i feltet.</p></li>
+        <li class="card"><span class="num">2</span><h3>Vælg stil</h3><p>Bestem, om teksten skal være mere formel, mere enkel, kortere eller længere.</p></li>
+        <li class="card"><span class="num">3</span><h3>Få din nye tekst</h3><p>AI omformulerer teksten på få sekunder. Læs den igennem, ret til, og brug den.</p></li>
+      </ol>
+      <p>Er du ikke tilfreds med resultatet, kan du blot prøve igen. Hver gang får du en ny version at vælge imellem.</p>
+    </section>
+
+    <section class="block">
+      <h2>Hvorfor bruge en tekst omskriver?</h2>
+      <p>Alle kender følelsen af at sidde fast i en sætning, der bare ikke vil lyde rigtigt. En tekst omskriver giver dig nye formuleringer, når du selv er løbet tør for idéer. Du sparer tid og får et frisk blik på din egen tekst.</p>
+      <div class="grid grid-3">
+        <div class="card"><h3>Spar tid på at skrive om tekst</h3><p>At skrive om tekst i hånden kan tage lang tid, især hvis det er mange afsnit. Med en gratis tekst omskriver får du et første udkast med det samme. Så kan du bruge din tid på at finpudse i stedet for at starte forfra.</p></div>
+        <div class="card"><h3>Gør teksten klarere</h3><p>Lange og tunge sætninger gør en tekst svær at læse. Værktøjet kan hjælpe dig med at forenkle sproget, så læseren hurtigere forstår, hvad du mener. Det er især nyttigt, når du skriver til et bredt publikum.</p></div>
+        <div class="card"><h3>Find den rigtige tone</h3><p>Den samme besked kan lyde meget forskelligt afhængigt af ordvalget. Måske skal din tekst være mere venlig, mere saglig eller mere overbevisende. En god omskriver hjælper dig med at ramme den tone, der passer til situationen.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Hvem kan bruge værktøjet til at omskrive tekst?</h2>
+      <p>Værktøjet er bygget til alle, der arbejder med tekst på dansk. Her er nogle af dem, der typisk har glæde af det:</p>
+      <ul class="grid who">
+        <li class="card"><strong>Studerende</strong><span>Få hjælp til at formulere dine egne noter og pointer klarere i opgaver og rapporter.</span></li>
+        <li class="card"><strong>Virksomheder</strong><span>Skriv produktbeskrivelser, nyhedsbreve og opslag til sociale medier om, så de passer til din målgruppe.</span></li>
+        <li class="card"><strong>Skribenter og bloggere</strong><span>Kom videre, når du sidder fast, og find nye vinkler på dine afsnit.</span></li>
+        <li class="card"><strong>SEO og webindhold</strong><span>Omskriv tekster til hjemmesider, så de bliver unikke og lettere at læse.</span></li>
+        <li class="card"><strong>E-mails og beskeder</strong><span>Gør en hurtig kladde mere høflig, kort eller professionel, før du trykker send.</span></li>
+      </ul>
+      <p>Uanset hvad du skriver, er målet det samme: en tekst, der lyder bedre og er lettere at forstå.</p>
+    </section>
+
+    <section class="block">
+      <h2>Forskellige måder at omformulere tekst på</h2>
+      <p>Der findes ikke kun én måde at omformulere en tekst på. Det afhænger af, hvad teksten skal bruges til, og hvem der skal læse den. Her er de mest almindelige former for omformulering af tekst:</p>
+      <div class="grid grid-2">
+        <div class="card"><h3>Mere formel</h3><p>Skal teksten bruges i en ansøgning, en rapport eller en henvendelse til en myndighed? Så er en mere formel tone ofte det rigtige valg. Sproget bliver mere præcist og professionelt, uden at det bliver stift.</p></div>
+        <div class="card"><h3>Mere enkel</h3><p>Vil du gerne omformulere tekst, så flere kan forstå den? En enkel version fjerner fagord og lange sætninger. Det er godt til hjemmesider, vejledninger og tekster til et bredt publikum.</p></div>
+        <div class="card"><h3>Kortere</h3><p>Nogle gange siger færre ord mere. En kortere version skærer det overflødige væk og beholder kernen. Det passer godt til opslag på sociale medier, overskrifter og resuméer.</p></div>
+        <div class="card"><h3>Længere</h3><p>Har du en kort tekst, der skal uddybes? Så kan værktøjet udvide den med flere forklaringer og detaljer. Husk altid at tjekke, at de tilføjede oplysninger er korrekte.</p></div>
+      </div>
+    </section>
+
+    <section class="block callout">
+      <h2>Omskrivning vs. plagiat – brug det ansvarligt</h2>
+      <p>Et værktøj til at omskrive tekst er en hjælp til at formulere dig bedre. Det er ikke en måde at gøre andres arbejde til dit eget. Hvis du omskriver en tekst, som en anden har skrevet, er idéerne stadig deres.</p>
+      <p>Derfor bør du altid angive dine kilder, når du bruger andres viden, især i skoleopgaver og faglige tekster. Mange uddannelsesinstitutioner har også regler for brug af AI, så tjek dem, før du afleverer.</p>
+      <p>Brug værktøjet til at forbedre dine egne tekster, finde nye formuleringer og gøre dit sprog klarere. Så får du mest ud af det – og du er på den sikre side.</p>
+    </section>
+
+    <section class="faq" id="pro">
+      <h2>Gratis og Pro</h2>
+      <p>Gratis: op til 300 ord pr. tekst. Pro: op til 3.000 ord pr. tekst og ingen ventetid.</p>
+      <div class="pro-box">
+        <a class="primary" id="buy" href="#" style="text-decoration:none">Køb Pro</a>
+        <label for="pro-code">Har du en Pro-kode?</label>
+        <input id="pro-code" placeholder="Indtast kode" autocomplete="off">
+        <button class="ghost" id="save-code">Gem</button>
+        <span id="pro-state"></span>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Ofte stillede spørgsmål om omskrivning af tekst</h2>
+      <details><summary>Hvordan omskriver jeg en tekst?</summary><p>Du omskriver en tekst ved at indsætte den i værktøjet, vælge en stil og klikke for at få en ny version. AI bevarer budskabet, men skifter ordvalg og sætningsopbygning. Læs altid resultatet igennem, og ret de steder til, hvor du vil have din egen stemme med.</p></details>
+      <details><summary>Er det gratis at omskrive min tekst?</summary><p>Ja, du kan omskrive din tekst gratis på omskrivningaftekst.dk. Indsæt blot din tekst, og få et nyt forslag med det samme. Værktøjet er lavet, så alle hurtigt kan få hjælp til at skrive om tekst uden besvær.</p></details>
+      <details><summary>Hvad er forskellen på at omformulere og omskrive tekst?</summary><p>I praksis betyder de to ord næsten det samme. At omformulere tekst handler ofte om at sige den samme pointe med andre ord. At omskrive tekst kan også dække større ændringer, fx at gøre teksten kortere, længere eller ændre tonen helt.</p></details>
+      <details><summary>Kan jeg bruge en tekst omskriver til skoleopgaver?</summary><p>Du kan bruge en tekst omskriver til at forbedre dine egne formuleringer, men du skal følge din skoles regler for AI. Omskriv aldrig andres tekst og aflever den som din egen. Angiv altid kilder, når du bruger andres idéer eller viden.</p></details>
+      <details><summary>Ændrer værktøjet betydningen af min tekst?</summary><p>Målet er at bevare betydningen og kun ændre måden, den bliver sagt på. AI kan dog af og til misforstå en nuance. Derfor er det en god idé at læse den omskrevne tekst grundigt igennem og rette eventuelle fejl, før du bruger den.</p></details>
+      <details><summary>Kan jeg skrive om tekst til min hjemmeside?</summary><p>Ja, værktøjet egner sig godt til at skrive om tekst til hjemmesider, produktsider og blogindlæg. Du kan gøre teksten mere enkel, mere overbevisende eller mere unik. Sørg for, at det endelige indhold er korrekt og passer til din virksomheds tone.</p></details>
+      <details><summary>Hvor lang tid tager det at omskrive tekst?</summary><p>Det tager typisk kun få sekunder at omskrive tekst med værktøjet. Du indsætter teksten, vælger stil og får resultatet med det samme. Den tid, du sparer, kan du bruge på at gennemlæse og finpudse den nye version.</p></details>
+    </section>
+
+    <section class="cta">
+      <h2>Prøv vores gratis omskriver nu</h2>
+      <p>Uanset om du skal omformulere en enkelt sætning eller en hel side, er du kun et klik fra en ny version. Indsæt din tekst ovenfor, vælg din stil, og se resultatet med det samme.</p>
+      <p>Omskrivning af tekst har aldrig været nemmere. Prøv det gratis i dag, og få en tekst, der lyder lige præcis, som du vil.</p>
+      <a class="primary" href="#input" id="cta-btn">Omskriv din tekst</a>
+    </section>
+
+  </main>
 
   <footer>© <span id="yr"></span> Omskriv min tekst</footer>
 </div>
@@ -169,8 +261,9 @@ const $ = id => document.getElementById(id);
 const input = $("input"), output = $("output"), go = $("go"), statusEl = $("status");
 let mode = "naturlig";
 $("buy").href = STRIPE_PAYMENT_LINK;
-$("corrector-link").href = CORRECTOR_URL;
+if ($("corrector-link")) $("corrector-link").href = CORRECTOR_URL;
 $("yr").textContent = new Date().getFullYear();
+$("cta-btn").onclick = e => { e.preventDefault(); input.scrollIntoView({behavior:"smooth", block:"center"}); input.focus({preventScroll:true}); };
 
 const store = {
   get(k){ try { return localStorage.getItem(k) || ""; } catch { return ""; } },
