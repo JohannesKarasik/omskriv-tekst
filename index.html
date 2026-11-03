@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Omskriv tekst gratis – AI tekstomskriver på dansk</title>
+<meta name="description" content="Omskriv din tekst gratis på sekunder. Gør den mere naturlig, professionel, kortere eller enklere – på korrekt dansk. Se LIX-tallet før og efter.">
+<link rel="canonical" href="https://DITDOMÆNE.dk/">
+<meta property="og:title" content="Omskriv tekst gratis – AI tekstomskriver på dansk">
+<meta property="og:description" content="Omskriv din tekst på sekunder. Naturlig, professionel, venlig, kortere eller enklere.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebApplication","name":"Omskriv min tekst","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"da","offers":{"@type":"Offer","price":"0","priceCurrency":"DKK"}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Er det gratis at omskrive tekst?","acceptedAnswer":{"@type":"Answer","text":"Ja. Du kan omskrive tekster på op til 300 ord gratis. Med Pro kan du omskrive længere tekster uden begrænsning."}},
+  {"@type":"Question","name":"Ændrer værktøjet meningen i min tekst?","acceptedAnswer":{"@type":"Answer","text":"Nej. Teksten skrives om med samme mening og de samme fakta. Navne, tal og hilsner bevares."}},
+  {"@type":"Question","name":"Hvad er LIX?","acceptedAnswer":{"@type":"Answer","text":"LIX er et læsbarhedstal. Under 25 er meget let, 25–34 let, 35–44 middel, 45–54 svær og 55 eller derover meget svær."}},
+  {"@type":"Question","name":"Gemmer I min tekst?","acceptedAnswer":{"@type":"Answer","text":"Nej. Teksten sendes kun til omskrivning og gemmes ikke på siden."}}
+ ]}
+]}
+</script>
+<style>
+:root{color-scheme:light;
+  --bg:#f3f5f6; --surface:#ffffff; --fg:#17232b; --muted:#5b6a73; --line:#d7dee2;
+  --accent:#1d5c63; --accent-ink:#ffffff; --mark:#f6e27a;
+  --good:#2f7d4a; --warn:#a86b12; --bad:#b23b3b;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#10181d; --surface:#172229; --fg:#e4ebee; --muted:#93a3ab; --line:#2a3a43;
+  --accent:#5fb3b3; --accent-ink:#0d1a1d; --mark:#6b5d1a;
+  --good:#6cc28a; --warn:#e0a54a; --bad:#e57b7b; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.55 var(--body)}
+.wrap{max-width:1120px;margin:0 auto;padding-block:32px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:24px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font:700 18px/1 var(--display);color:var(--fg);text-decoration:none}
+.pro-link{font:600 14px/1 var(--body);color:var(--accent);text-decoration:none;border:1px solid var(--accent);border-radius:999px;padding:8px 14px}
+h1{font:700 clamp(30px,5vw,44px)/1.05 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%);padding:0 2px}
+h2{font:700 24px/1.2 var(--display);margin:0 0 8px;text-wrap:balance}
+h3{font:600 16px/1.3 var(--body);margin:0 0 4px}
+.lede{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.modes{display:flex;flex-wrap:wrap;gap:8px}
+.mode{font:500 14px/1 var(--body);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 14px;border-radius:999px;cursor:pointer}
+.mode:hover{border-color:var(--accent)}
+.mode[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sheet{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.sheet{grid-template-columns:1fr}}
+.pane{background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;min-width:0}
+.pane-head,.pane-foot{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap;padding:10px 16px}
+.pane-head{border-bottom:1px solid var(--line)}
+.pane-foot{border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.label{font:600 12px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+textarea,.out{font:400 16px/1.65 var(--body);color:var(--fg);background:transparent;border:0;resize:vertical;padding:16px;min-height:280px;width:100%}
+.out{white-space:pre-wrap;overflow-wrap:anywhere}
+.out.placeholder{color:var(--muted)}
+.lix{font:500 13px/1 var(--mono);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:8px}
+.lix b{font-weight:500;color:var(--fg)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.over{color:var(--bad)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.primary{font:600 15px/1 var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:14px 22px;cursor:pointer}
+.primary:disabled{opacity:.55;cursor:default}
+.ghost{font:500 13px/1 var(--body);background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+.status{color:var(--muted);font-size:14px}
+.status.err{color:var(--bad)}
+.status a{color:var(--accent)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:24px;border-top:1px solid var(--line)}
+@media (max-width:760px){.info{grid-template-columns:1fr}}
+.info p,.faq p{margin:0;color:var(--muted);max-width:65ch}
+.faq{display:flex;flex-direction:column;gap:16px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+summary{font-weight:600;cursor:pointer}
+details p{margin-top:8px}
+.pro-box{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.pro-box input{font:400 14px var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);width:160px}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:no-preference){.thinking::after{content:"";display:inline-block;width:1ch;animation:dots 1.2s steps(4) infinite}}
+@keyframes dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">Omskriv min tekst</a>
+    <a class="pro-link" id="pro-link" href="#pro">Få Pro</a>
+  </nav>
+
+  <header>
+    <h1>Omskriv <span>tekst</span> gratis</h1>
+    <p class="lede">Indsæt din tekst, vælg en stil, og få den skrevet om på korrekt dansk med samme mening. LIX-tallet viser, hvor let teksten er at læse før og efter.</p>
+  </header>
+
+  <div class="modes" role="group" aria-label="Vælg stil">
+    <button class="mode" id="m-naturlig" data-mode="naturlig" aria-pressed="true">Mere naturlig</button>
+    <button class="mode" id="m-prof" data-mode="professionel" aria-pressed="false">Professionel</button>
+    <button class="mode" id="m-venlig" data-mode="venlig" aria-pressed="false">Venlig</button>
+    <button class="mode" id="m-kort" data-mode="kortere" aria-pressed="false">Kortere</button>
+    <button class="mode" id="m-enkel" data-mode="enklere" aria-pressed="false">Enklere</button>
+    <button class="mode" id="m-lang" data-mode="laengere" aria-pressed="false">Uddyb</button>
+  </div>
+
+  <div class="sheet">
+    <section class="pane" aria-labelledby="lbl-in">
+      <div class="pane-head"><span class="label" id="lbl-in">Din tekst</span><button class="ghost" id="clear">Ryd</button></div>
+      <textarea id="input" spellcheck="true" lang="da" aria-labelledby="lbl-in" placeholder="Indsæt eller skriv din tekst her…"></textarea>
+      <div class="pane-foot"><span class="lix" id="lix-in"></span><span id="count-in"></span></div>
+    </section>
+    <section class="pane" aria-labelledby="lbl-out">
+      <div class="pane-head"><span class="label" id="lbl-out">Omskrevet</span><button class="ghost" id="copy">Kopiér</button></div>
+      <div class="out placeholder" id="output" aria-live="polite">Din omskrevne tekst vises her.</div>
+      <div class="pane-foot"><span class="lix" id="lix-out"></span><span id="count-out"></span></div>
+    </section>
+  </div>
+
+  <div class="actions">
+    <button class="primary" id="go">Omskriv tekst</button>
+    <span class="status" id="status" role="status"></span>
+  </div>
+
+  <section class="info" aria-label="Sådan virker det">
+    <div><h3>Samme mening, bedre tekst</h3><p>Værktøjet skriver din tekst om, så den læses bedre, men bevarer fakta, navne og tal.</p></div>
+    <div><h3>Seks stilarter</h3><p>Gør teksten mere naturlig, professionel eller venlig. Eller gør den kortere, enklere eller mere uddybende.</p></div>
+    <div><h3>Se læsbarheden</h3><p>LIX-tallet viser, hvor svær teksten er at læse. Brug "Enklere" til tekster for kunder og borgere.</p></div>
+  </section>
+
+  <section class="faq" id="pro">
+    <h2>Gratis og Pro</h2>
+    <p>Gratis: op til 300 ord pr. tekst. Pro: op til 3.000 ord pr. tekst og ingen ventetid.</p>
+    <div class="pro-box">
+      <a class="primary" id="buy" href="#" style="text-decoration:none">Køb Pro</a>
+      <label for="pro-code">Har du en Pro-kode?</label>
+      <input id="pro-code" placeholder="Indtast kode" autocomplete="off">
+      <button class="ghost" id="save-code">Gem</button>
+      <span id="pro-state"></span>
+    </div>
+  </section>
+
+  <section class="faq" aria-label="Spørgsmål og svar">
+    <h2>Spørgsmål og svar</h2>
+    <details><summary>Er det gratis at omskrive tekst?</summary><p>Ja. Du kan omskrive tekster på op til 300 ord gratis. Med Pro kan du omskrive længere tekster uden begrænsning.</p></details>
+    <details><summary>Ændrer værktøjet meningen i min tekst?</summary><p>Nej. Teksten skrives om med samme mening og de samme fakta. Navne, tal og hilsner bevares.</p></details>
+    <details><summary>Hvad er LIX?</summary><p>LIX er et læsbarhedstal. Under 25 er meget let, 25–34 let, 35–44 middel, 45–54 svær og 55 eller derover meget svær.</p></details>
+    <details><summary>Gemmer I min tekst?</summary><p>Nej. Teksten sendes kun til omskrivning og gemmes ikke på siden.</p></details>
+    <details><summary>Kan jeg også rette stavefejl?</summary><p>Ja. "Mere naturlig" retter stave-, komma- og grammatikfejl. Til ren korrektur kan du bruge vores <a href="#" id="corrector-link">dansk stavekontrol</a>.</p></details>
+  </section>
+
+  <footer>© <span id="yr"></span> Omskriv min tekst</footer>
+</div>
+
+<script>
+// ====== SET THESE TWO ======
+const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/DIT-LINK";   // your Stripe Payment Link
+const CORRECTOR_URL = "https://DIN-STAVEKONTROL.dk";             // your existing corrector site
+const FREE_WORDS = 300;
+// ===========================
+
+const $ = id => document.getElementById(id);
+const input = $("input"), output = $("output"), go = $("go"), statusEl = $("status");
+let mode = "naturlig";
+$("buy").href = STRIPE_PAYMENT_LINK;
+$("corrector-link").href = CORRECTOR_URL;
+$("yr").textContent = new Date().getFullYear();
+
+const store = {
+  get(k){ try { return localStorage.getItem(k) || ""; } catch { return ""; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch {} }
+};
+function proCode(){ return store.get("proCode"); }
+function showPro(){ $("pro-state").textContent = proCode() ? "Pro er aktiv" : ""; $("pro-code").value = proCode(); }
+$("save-code").onclick = () => { store.set("proCode", $("pro-code").value.trim()); showPro(); refreshIn(); };
+showPro();
+
+function words(t){ return (t.trim().match(/\S+/g) || []).length; }
+function lix(text){
+  const w = text.match(/[A-Za-zÆØÅæøåÉéÜüÖöÄä0-9]+/g) || [];
+  if (w.length < 3) return null;
+  const s = Math.max(1, (text.match(/[.!?:]+(\s|$)|\n\s*\n/g) || []).length);
+  return Math.round(w.length / s + w.filter(x => x.length > 6).length * 100 / w.length);
+}
+function renderLix(el, text){
+  const v = lix(text);
+  if (v === null){ el.textContent = "LIX –"; return; }
+  const [lbl, col] = v<25?["meget let","var(--good)"]:v<35?["let","var(--good)"]:v<45?["middel","var(--warn)"]:v<55?["svær","var(--bad)"]:["meget svær","var(--bad)"];
+  el.innerHTML = '<span class="dot"></span>LIX <b></b> · ' + lbl;
+  el.querySelector("b").textContent = v;
+  el.querySelector(".dot").style.background = col;
+}
+function refreshIn(){
+  renderLix($("lix-in"), input.value);
+  const n = words(input.value), max = proCode() ? 3000 : FREE_WORDS;
+  $("count-in").textContent = n + " / " + max + " ord";
+  $("count-in").className = n > max ? "over" : "";
+}
+function refreshOut(){
+  const t = output.classList.contains("placeholder") ? "" : output.textContent;
+  renderLix($("lix-out"), t);
+  $("count-out").textContent = t ? words(t) + " ord" : "";
+}
+input.addEventListener("input", () => { refreshIn(); store.set("draft", input.value); });
+input.value = store.get("draft");
+refreshIn(); refreshOut();
+
+document.querySelectorAll(".mode").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".mode").forEach(x => x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true"); mode = b.dataset.mode;
+});
+$("clear").onclick = () => { input.value = ""; store.set("draft",""); refreshIn(); input.focus(); };
+$("copy").onclick = async () => {
+  if (output.classList.contains("placeholder")) return;
+  try { await navigator.clipboard.writeText(output.textContent); statusEl.className="status"; statusEl.textContent = "Kopieret"; }
+  catch { const r=document.createRange(); r.selectNodeContents(output); const s=getSelection(); s.removeAllRanges(); s.addRange(r); statusEl.textContent="Markeret – tryk Ctrl/Cmd + C"; }
+};
+
+function showError(msg, upgrade){
+  statusEl.className = "status err";
+  statusEl.textContent = msg + " ";
+  if (upgrade){ const a=document.createElement("a"); a.href=STRIPE_PAYMENT_LINK; a.textContent="Få Pro"; statusEl.append(a); }
+}
+
+go.onclick = async () => {
+  const text = input.value.trim();
+  if (!text) return showError("Indsæt en tekst først.");
+  go.disabled = true;
+  output.classList.add("placeholder");
+  output.innerHTML = '<span class="thinking">Skriver om</span>';
+  statusEl.className = "status"; statusEl.textContent = "";
+  try {
+    const r = await fetch("/api/rewrite", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-pro-code": proCode() },
+      body: JSON.stringify({ text, mode })
+    });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw Object.assign(new Error(data.error || "Noget gik galt. Prøv igen."), { upgrade: data.upgrade });
+    output.classList.remove("placeholder");
+    output.textContent = data.result;
+    statusEl.textContent = "Færdig";
+  } catch (e) {
+    output.classList.add("placeholder");
+    output.textContent = "Din omskrevne tekst vises her.";
+    showError(e.message || "Noget gik galt. Prøv igen.", e.upgrade);
+  } finally {
+    go.disabled = false; refreshOut();
+  }
+};
+</script>
+</body>
+</html>
